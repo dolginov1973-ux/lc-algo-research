@@ -41,6 +41,23 @@ Or trigger the `backtest` workflow (Actions tab) — it does fetch + rank + comm
 `breakout_retest`, `funding_arb` — registered so they're tracked, all-flat so they never fake a
 win. See `src/strategies/index.mjs`.
 
+## Hyperliquid copy-signal source (on-chain top-trader following)
+
+A second, probably stronger, alpha source than standard TA: mirror a proven directional trader.
+Hyperliquid is a fully on-chain perp DEX — every trader's positions and fills are public and
+verifiable, so leaderboards can't be faked the way centralized ones can.
+
+```bash
+node src/hyperliquid/rank-traders.mjs 15      # find copyable directional traders (not MMs/vaults)
+node src/hyperliquid/track.mjs <address>      # live positions + recent fills for one trader
+node src/hyperliquid/watch.mjs <address>      # diff vs last snapshot -> OPEN/CLOSE/FLIP/RESIZE signals
+```
+
+The leaderboard is a coarse, stale prefilter (its all-time ROI is garbage-inflated; a top-ranked
+account can already be flat/withdrawn) — `track`/`watch` verify the LIVE on-chain state every time.
+`watch` is the copy feed: run it on an interval, it emits structured signals an executor mirrors.
+First run records a baseline silently (you don't copy an entry you already missed).
+
 ## Layout
 
 ```

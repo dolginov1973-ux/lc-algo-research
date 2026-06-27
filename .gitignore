@@ -3,3 +3,5 @@ node_modules/
 .env*.local
 npm-debug.log*
 reports/*.local.*
+data-hl/snap-*.json
+data-hl/signals-*.jsonl
