@@ -54,3 +54,5 @@ jobs:
           git commit -m "backtest: refresh data + ranking [skip ci]" || echo "nothing to commit"
           git pull --rebase origin master || true
           git push origin HEAD:master || true
+
+# (re-index nudge)
