@@ -1,0 +1,534 @@
+{
+  "generatedAt": "2026-06-27T10:30:30.427Z",
+  "results": [
+    {
+      "addr": "0x10b6f072fabe21bc72ffd77ff5d4414e6cef2980",
+      "av": 546593.782248,
+      "ntl": 1643495.8276,
+      "grossLev": 3.0067956880898334,
+      "maxPosLev": 3,
+      "closes": 948,
+      "closesPerDay": 6.564347044805701,
+      "realized": 435048.6248299998,
+      "fees": 15412.691689000005,
+      "winRate": 0.8892405063291139,
+      "profitFactor": 4.713558903451212,
+      "avgWin": 655.041547939501,
+      "avgLoss": 1115.7276198380944,
+      "maxDD": 94711.78000700005,
+      "span": 144.41649619212964,
+      "isMM": false,
+      "flags": [],
+      "verdict": "GO",
+      "topCoins": [
+        [
+          "BTC",
+          435048.6248299998
+        ]
+      ]
+    },
+    {
+      "addr": "0x321f7193eadbacb67eff00f76b975a487e5b1c84",
+      "av": 213219.557983,
+      "ntl": 2621941.52336,
+      "grossLev": 12.29690910234908,
+      "maxPosLev": 10,
+      "closes": 517,
+      "closesPerDay": 17.02790459950396,
+      "realized": 403963.1539279996,
+      "fees": 4865.801880000009,
+      "winRate": 0.7504835589941973,
+      "profitFactor": 13.321647328449338,
+      "avgWin": 1125.6391423994842,
+      "avgLoss": 254.14599475193802,
+      "maxDD": 32784.83332300023,
+      "span": 30.361927210648147,
+      "isMM": false,
+      "flags": [],
+      "verdict": "GO",
+      "topCoins": [
+        [
+          "ETH",
+          254949.9998579998
+        ],
+        [
+          "BTC",
+          148434.11156999995
+        ],
+        [
+          "xyz:SP500",
+          579.0425
+        ]
+      ]
+    },
+    {
+      "addr": "0x12f147f08112ff4c32c66bad45118302d20d807c",
+      "av": 644571.711505,
+      "ntl": 13594500,
+      "grossLev": 21.090748720973842,
+      "maxPosLev": 40,
+      "closes": 600,
+      "closesPerDay": 87.00769567962783,
+      "realized": 150316.61326800028,
+      "fees": 9323.764630000029,
+      "winRate": 0.26666666666666666,
+      "profitFactor": 3.031199884629035,
+      "avgWin": 1402.0029006125008,
+      "avgLoss": 168.19057006818167,
+      "maxDD": 74003.85082999992,
+      "span": 6.895941736111111,
+      "isMM": false,
+      "flags": [
+        "high leverage (40x) — liquidation risk"
+      ],
+      "verdict": "CAUTION",
+      "topCoins": [
+        [
+          "BTC",
+          150316.61326800028
+        ]
+      ]
+    },
+    {
+      "addr": "0x2312171890250347dbf1b082bdf7950504909e92",
+      "av": 139593.55519,
+      "ntl": 1365259.64487,
+      "grossLev": 9.78024840052073,
+      "maxPosLev": 20,
+      "closes": 1072,
+      "closesPerDay": 83.8645289381461,
+      "realized": 38677.814226999915,
+      "fees": 2659.46594,
+      "winRate": 0.45988805970149255,
+      "profitFactor": 1.6700368184044716,
+      "avgWin": 195.54304871196751,
+      "avgLoss": 99.6975972158896,
+      "maxDD": 17942.016091,
+      "span": 12.782519780092592,
+      "isMM": false,
+      "flags": [
+        "high leverage (20x) — liquidation risk"
+      ],
+      "verdict": "CAUTION",
+      "topCoins": [
+        [
+          "WLD",
+          53882.514897000015
+        ],
+        [
+          "xyz:CBRS",
+          14056.755298000005
+        ],
+        [
+          "ZEC",
+          -12560.826776999998
+        ],
+        [
+          "ETH",
+          -12481.212685
+        ]
+      ]
+    },
+    {
+      "addr": "0x0c349d9b92fbd172bbb5a17a9db0a673a6a10ad3",
+      "av": 427366.084986,
+      "ntl": 4298666.84072,
+      "grossLev": 10.058511874803587,
+      "maxPosLev": 40,
+      "closes": 536,
+      "closesPerDay": 237.05730749226586,
+      "realized": 31585.441618000023,
+      "fees": 2541.4964789999817,
+      "winRate": 0.8824626865671642,
+      "profitFactor": 1.4610950612448228,
+      "avgWin": 211.5990993932346,
+      "avgLoss": 1087.316387222222,
+      "maxDD": 65233.800326,
+      "span": 2.2610566435185184,
+      "isMM": false,
+      "flags": [
+        "high leverage (40x) — liquidation risk"
+      ],
+      "verdict": "CAUTION",
+      "topCoins": [
+        [
+          "xyz:SKHX",
+          74470.85533800001
+        ],
+        [
+          "BTC",
+          -68500.93239499998
+        ],
+        [
+          "xyz:SPCX",
+          13916.065298999998
+        ],
+        [
+          "xyz:MU",
+          11699.453376
+        ]
+      ]
+    },
+    {
+      "addr": "0xd05808946809c180d190608e13f473db30aa8524",
+      "av": 1192338.124877,
+      "ntl": 5295578.59983,
+      "grossLev": 4.441339658057386,
+      "maxPosLev": 10,
+      "closes": 984,
+      "closesPerDay": 41.50069090545242,
+      "realized": 928834.5848959999,
+      "fees": 4366.236896999998,
+      "winRate": 0.9573170731707317,
+      "profitFactor": 26.93350238183728,
+      "avgWin": 1024.0452176857743,
+      "avgLoss": 852.7621467619023,
+      "maxDD": 28963.999999999905,
+      "span": 23.710448634259258,
+      "isMM": true,
+      "flags": [
+        "MM/SCALPER pattern (very high win-rate + frequency) — not directionally copyable"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "ZEC",
+          565687.8673359999
+        ],
+        [
+          "xyz:SPCX",
+          169214.36853200002
+        ],
+        [
+          "BTC",
+          121556.81353800005
+        ],
+        [
+          "ETH",
+          43854.99999999999
+        ]
+      ]
+    },
+    {
+      "addr": "0xadedb7e42d645ad812019f3d182d393b1d17d8e6",
+      "av": 0,
+      "ntl": 0,
+      "grossLev": 0,
+      "maxPosLev": 0,
+      "closes": 578,
+      "closesPerDay": 47.39460471600233,
+      "realized": 240994.6743559999,
+      "fees": 1668.2096889999993,
+      "winRate": 1,
+      "profitFactor": null,
+      "avgWin": 416.94580338408286,
+      "avgLoss": 0,
+      "maxDD": 0,
+      "span": 12.195480972222223,
+      "isMM": true,
+      "flags": [
+        "MM/SCALPER pattern (very high win-rate + frequency) — not directionally copyable",
+        "account small/withdrawn (live AV low)",
+        "currently flat (nothing to mirror right now)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "HYPE",
+          211667.98858999982
+        ],
+        [
+          "PURR",
+          29326.68576599999
+        ]
+      ]
+    },
+    {
+      "addr": "0xf42765dc149d46fe83b077d3a7ef198c510db6d6",
+      "av": 18794.196275,
+      "ntl": 63042.73555,
+      "grossLev": 3.354372521577808,
+      "maxPosLev": 10,
+      "closes": 172,
+      "closesPerDay": 0.400427014950554,
+      "realized": 206167.44288221,
+      "fees": 270.5467624699998,
+      "winRate": 0.9534883720930233,
+      "profitFactor": 1787.626629502642,
+      "avgWin": 1257.8221810583534,
+      "avgLoss": 14.424351419999999,
+      "maxDD": 93.99481135999667,
+      "span": 429.5414484490741,
+      "isMM": false,
+      "flags": [
+        "account small/withdrawn (live AV low)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "@107",
+          201493.363175
+        ],
+        [
+          "@254",
+          4062.03191357
+        ],
+        [
+          "HYPE",
+          706.042605
+        ],
+        [
+          "@206",
+          -91.15123999
+        ]
+      ]
+    },
+    {
+      "addr": "0x05904930cae1e9a48c055f4a8a83480ba7fc6abf",
+      "av": 120891.352477,
+      "ntl": 921402.97268,
+      "grossLev": 7.621744267070717,
+      "maxPosLev": 10,
+      "closes": 848,
+      "closesPerDay": 121.96636403025694,
+      "realized": 28172.817283999997,
+      "fees": 121.56467999999995,
+      "winRate": 1,
+      "profitFactor": null,
+      "avgWin": 33.22266189150943,
+      "avgLoss": 0,
+      "maxDD": 0,
+      "span": 6.952736574074074,
+      "isMM": true,
+      "flags": [
+        "MM/SCALPER pattern (very high win-rate + frequency) — not directionally copyable"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "NEAR",
+          24535.615569999987
+        ],
+        [
+          "ZRO",
+          3637.2017139999953
+        ]
+      ]
+    },
+    {
+      "addr": "0x517bb82ad25d90b9d9e0af57682931c44f7ff64c",
+      "av": 0,
+      "ntl": 0,
+      "grossLev": 0,
+      "maxPosLev": 0,
+      "closes": 1550,
+      "closesPerDay": 151091.55525469623,
+      "realized": 2956.7104840000047,
+      "fees": 8850.03783300001,
+      "winRate": 0.5270967741935484,
+      "profitFactor": 1.502718725942908,
+      "avgWin": 10.817810771113836,
+      "avgLoss": 8.023793882673937,
+      "maxDD": 3766.8177959999957,
+      "span": 0.010258680555555556,
+      "isMM": false,
+      "flags": [
+        "account small/withdrawn (live AV low)",
+        "currently flat (nothing to mirror right now)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "BTC",
+          2956.7104840000047
+        ]
+      ]
+    },
+    {
+      "addr": "0xe5ac6d42ac6e553a3541b09d322f864f6d7abbe3",
+      "av": 0,
+      "ntl": 0,
+      "grossLev": 0,
+      "maxPosLev": 0,
+      "closes": 18,
+      "closesPerDay": 155.50681302225573,
+      "realized": -41.154195,
+      "fees": 98.68769899999998,
+      "winRate": 0.16666666666666666,
+      "profitFactor": 0.06527348695354734,
+      "avgWin": 0.957955,
+      "avgLoss": 2.935204,
+      "maxDD": 44.02806,
+      "span": 0.11575055555555555,
+      "isMM": false,
+      "flags": [
+        "account small/withdrawn (live AV low)",
+        "currently flat (nothing to mirror right now)",
+        "weak win rate + PF",
+        "profit factor ≤1.1 (thin/negative edge)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "HYPE",
+          -41.154195
+        ]
+      ]
+    },
+    {
+      "addr": "0x4b2de27ef0a189125cf2ca554576fb5307c22f6f",
+      "av": 0,
+      "ntl": 0,
+      "grossLev": 0,
+      "maxPosLev": 0,
+      "closes": 996,
+      "closesPerDay": 1214.0623813598627,
+      "realized": -3654.605712999967,
+      "fees": 1755.1838730000013,
+      "winRate": 0.17670682730923695,
+      "profitFactor": 0.9271854912294423,
+      "avgWin": 264.40920117613643,
+      "avgLoss": 61.208079414634184,
+      "maxDD": 50190.62511999998,
+      "span": 0.8203861805555556,
+      "isMM": false,
+      "flags": [
+        "account small/withdrawn (live AV low)",
+        "currently flat (nothing to mirror right now)",
+        "weak win rate + PF",
+        "profit factor ≤1.1 (thin/negative edge)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "xyz:SKHX",
+          46536.019407000014
+        ],
+        [
+          "HYPE",
+          -36248.829220000014
+        ],
+        [
+          "xyz:MU",
+          -13941.795900000017
+        ]
+      ]
+    },
+    {
+      "addr": "0x1714fa1d4db089a7dd036fc8d1a9d1fd759a0250",
+      "av": 29999.22429,
+      "ntl": 303003.1882,
+      "grossLev": 10.10036743853419,
+      "maxPosLev": 10,
+      "closes": 1056,
+      "closesPerDay": 1186.6408944484704,
+      "realized": -22257.39641399999,
+      "fees": 2944.4526860000033,
+      "winRate": 0.6789772727272727,
+      "profitFactor": 0.3485896126151861,
+      "avgWin": 16.611733966527236,
+      "avgLoss": 100.79058899115023,
+      "maxDD": 33317.85348399999,
+      "span": 0.8899069675925926,
+      "isMM": false,
+      "flags": [
+        "account small/withdrawn (live AV low)",
+        "profit factor ≤1.1 (thin/negative edge)",
+        "realized drawdown >40% of account (volatile)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "BTC",
+          -31147.51735
+        ],
+        [
+          "ZEC",
+          8890.120936000038
+        ]
+      ]
+    },
+    {
+      "addr": "0xd67ca2c6f8bc84acf4fa4472b82a8740dc0a53ff",
+      "av": 1162491.437218,
+      "ntl": 13624827.29291,
+      "grossLev": 11.720367872572089,
+      "maxPosLev": 10,
+      "closes": 894,
+      "closesPerDay": 348.5011936933798,
+      "realized": -33856.274516000034,
+      "fees": 5321.9879130000045,
+      "winRate": 0.13758389261744966,
+      "profitFactor": 0.05366237594314459,
+      "avgWin": 15.608380601626024,
+      "avgLoss": 46.402211841764,
+      "maxDD": 33856.274516000034,
+      "span": 2.5652709837962964,
+      "isMM": false,
+      "flags": [
+        "weak win rate + PF",
+        "profit factor ≤1.1 (thin/negative edge)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "ETH",
+          -18066.572619999995
+        ],
+        [
+          "HYPE",
+          -11281.593565999996
+        ],
+        [
+          "xyz:DRAM",
+          -4576.608800000001
+        ],
+        [
+          "xyz:MINIMAX",
+          564.5344600000002
+        ]
+      ]
+    },
+    {
+      "addr": "0x3a94ec43996178f7013988358f58baf18a4cc707",
+      "av": 53360.899201,
+      "ntl": 238164.900138,
+      "grossLev": 4.463284984026969,
+      "maxPosLev": 5,
+      "closes": 813,
+      "closesPerDay": 42.73266079910208,
+      "realized": -239747.64634815027,
+      "fees": 10635.52924161002,
+      "winRate": 0.6678966789667896,
+      "profitFactor": 0.27037068056734825,
+      "avgWin": 163.6107515469615,
+      "avgLoss": 1216.9936460672234,
+      "maxDD": 281218.99795473035,
+      "span": 19.025260416666665,
+      "isMM": false,
+      "flags": [
+        "profit factor ≤1.1 (thin/negative edge)",
+        "realized drawdown >40% of account (volatile)"
+      ],
+      "verdict": "SKIP",
+      "topCoins": [
+        [
+          "@85",
+          -101410.54227052
+        ],
+        [
+          "xyz:SPCX",
+          -57028.9552
+        ],
+        [
+          "@13",
+          -54334.47236459
+        ],
+        [
+          "LIT",
+          30766.848142000006
+        ]
+      ]
+    }
+  ]
+}

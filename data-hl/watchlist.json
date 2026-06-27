@@ -6,6 +6,12 @@
       "label": "rotten-tomato",
       "vet": "GO 2026-06-27: 75% win, PF 13.3, +$403k/30d, asymmetric wins, BTC/ETH directional 10x",
       "addedAt": "2026-06-27"
+    },
+    {
+      "addr": "0x10b6f072fabe21bc72ffd77ff5d4414e6cef2980",
+      "label": "low-lev-89",
+      "vet": "GO 2026-06-27: 89% win, PF 4.7, +$435k, conservative 3x leverage. Monitor win-rate for MM drift.",
+      "addedAt": "2026-06-27"
     }
   ]
 }
