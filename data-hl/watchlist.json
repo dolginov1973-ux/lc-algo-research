@@ -1,0 +1,11 @@
+{
+  "note": "Vetted Hyperliquid directional traders to mirror (paper/forward record). MM/scalpers excluded. Re-vet periodically with vet.mjs; drop anyone who goes flat/withdrawn or flips to MM behaviour.",
+  "traders": [
+    {
+      "addr": "0x321f7193eadbacb67eff00f76b975a487e5b1c84",
+      "label": "rotten-tomato",
+      "vet": "GO 2026-06-27: 75% win, PF 13.3, +$403k/30d, asymmetric wins, BTC/ETH directional 10x",
+      "addedAt": "2026-06-27"
+    }
+  ]
+}

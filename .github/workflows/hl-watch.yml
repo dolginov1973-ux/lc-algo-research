@@ -1,0 +1,39 @@
+name: hl-watch
+
+# Forward copy-signal capture. Polls the vetted Hyperliquid traders in data-hl/watchlist.json
+# and commits any position-change signals + the latest snapshot back to the repo, building an
+# on-chain-verifiable paper record of the copy feed. GitHub cron is best-effort (can lag) — fine
+# here because these are swing/position traders holding hours-to-days, not scalpers. For timely
+# LIVE execution we'll move this to a dedicated always-on host (Infra B).
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *' # every ~15 min (GitHub may delay under load)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hl-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Watch vetted traders
+        run: node src/hyperliquid/watch-all.mjs
+      - name: Commit snapshots + signals
+        run: |
+          git config user.name "lc-seo"
+          git config user.email "noreply@anthropic.com"
+          # snap-*/signals-* are gitignored for local dev — force-add so the cron persists state.
+          git add -f data-hl/snap-*.json data-hl/signals-*.jsonl 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "hl-watch: snapshot + signals [skip ci]"
+          git pull --rebase origin master || true
+          git push origin HEAD:master || true

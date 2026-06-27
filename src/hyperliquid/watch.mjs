@@ -17,16 +17,6 @@ import { clearinghouseState } from './api.mjs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = join(__dirname, '..', '..', 'data-hl');
 
-const addr = process.argv[2];
-const emitInitial = process.argv.includes('--emit-initial');
-if (!addr) {
-  console.error('usage: node src/hyperliquid/watch.mjs <address> [--emit-initial]');
-  process.exit(1);
-}
-
-const snapPath = join(OUT_DIR, `snap-${addr}.json`);
-const sigPath = join(OUT_DIR, `signals-${addr}.jsonl`);
-
 function positionsMap(chs) {
   const m = {};
   for (const ap of chs.assetPositions || []) {
@@ -61,33 +51,50 @@ function diff(prev, cur, accountValue) {
   return signals;
 }
 
-await mkdir(OUT_DIR, { recursive: true });
-const chs = await clearinghouseState(addr);
-const cur = positionsMap(chs);
-const accountValue = +(chs.marginSummary?.accountValue || 0);
+// One watch cycle for one address: diff live vs stored snapshot, append signals, save snapshot.
+// Reusable by the CLI and by watch-all.mjs (the cron runner).
+export async function watchOnce(addr, { emitInitial = false } = {}) {
+  await mkdir(OUT_DIR, { recursive: true });
+  const snapPath = join(OUT_DIR, `snap-${addr}.json`);
+  const sigPath = join(OUT_DIR, `signals-${addr}.jsonl`);
 
-let prev = null;
-try {
-  prev = JSON.parse(await readFile(snapPath, 'utf8')).positions;
-} catch {
-  prev = null;
+  const chs = await clearinghouseState(addr);
+  const cur = positionsMap(chs);
+  const accountValue = +(chs.marginSummary?.accountValue || 0);
+
+  let prev = null;
+  try {
+    prev = JSON.parse(await readFile(snapPath, 'utf8')).positions;
+  } catch {
+    prev = null;
+  }
+
+  const ts = new Date().toISOString();
+  let signals = [];
+  let baseline = false;
+  if (prev === null) {
+    baseline = true;
+    if (emitInitial) signals = diff({}, cur, accountValue);
+    console.log(`[${ts}] baseline ${addr.slice(0, 10)}… — ${Object.keys(cur).length} open pos${emitInitial ? ' (emitted)' : ' (watching from here)'}`);
+  } else {
+    signals = diff(prev, cur, accountValue);
+    if (!signals.length) console.log(`[${ts}] no change ${addr.slice(0, 10)}… (${Object.keys(cur).length} open pos)`);
+  }
+
+  for (const s of signals) {
+    console.log(`  SIGNAL ${s.action.padEnd(11)} ${s.coin.padEnd(6)} size ${s.size}${s.lev ? ` @${s.lev}x` : ''} refPx ${s.refPx}`);
+    await appendFile(sigPath, JSON.stringify({ ts, addr, ...s }) + '\n');
+  }
+  await writeFile(snapPath, JSON.stringify({ ts, addr, accountValue, positions: cur }, null, 2));
+  return { signals, baseline, openCount: Object.keys(cur).length };
 }
 
-const ts = new Date().toISOString();
-let signals = [];
-if (prev === null) {
-  if (emitInitial) signals = diff({}, cur, accountValue);
-  console.log(`[${ts}] baseline recorded for ${addr} — ${Object.keys(cur).length} open position(s)${emitInitial ? ' (emitted as initial)' : ' (no signals; watching from here)'}`);
-} else {
-  signals = diff(prev, cur, accountValue);
-  if (!signals.length) console.log(`[${ts}] no change (${Object.keys(cur).length} open position(s))`);
+// CLI entry: node src/hyperliquid/watch.mjs <address> [--emit-initial]
+if (import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith('watch.mjs')) {
+  const addr = process.argv[2];
+  if (!addr) {
+    console.error('usage: node src/hyperliquid/watch.mjs <address> [--emit-initial]');
+    process.exit(1);
+  }
+  await watchOnce(addr, { emitInitial: process.argv.includes('--emit-initial') });
 }
-
-for (const s of signals) {
-  const line = { ts, addr, ...s };
-  console.log(`  SIGNAL ${s.action.padEnd(11)} ${s.coin.padEnd(6)} size ${s.size}${s.lev ? ` @${s.lev}x` : ''} refPx ${s.refPx}`);
-  await appendFile(sigPath, JSON.stringify(line) + '\n');
-}
-
-await writeFile(snapPath, JSON.stringify({ ts, addr, accountValue, positions: cur }, null, 2));
-if (signals.length) console.log(`\n${signals.length} signal(s) -> data-hl/signals-${addr.slice(0, 10)}….jsonl`);
