@@ -25,6 +25,7 @@ import {
   highest,
   lowest,
 } from '../engine/indicators.mjs';
+import { REGIME_STRATEGIES } from './regime.mjs';
 
 const sign = (x) => (x > 0 ? 1 : x < 0 ? -1 : 0);
 
@@ -311,6 +312,8 @@ export const STRATEGIES = [
   { key: 'vwap_reversion', name: 'VWAP(20) reversion', category: 'meanrev', generate: (b) => vwapReversion(b) },
   { key: 'zscore_reversion', name: 'Z-score(20) reversion', category: 'meanrev', generate: (b) => zscoreReversion(b) },
   { key: 'opening_range_breakout', name: 'Opening-range breakout (UTC day)', category: 'breakout', generate: (b) => openingRangeBreakout(b) },
+  // Regime-aware composites (v2) — gate behaviour by ADX regime / multi-indicator confirmation.
+  ...REGIME_STRATEGIES,
 ];
 
 // STUBS — registered for completeness, excluded from the live run until their engine/data

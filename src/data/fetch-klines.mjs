@@ -19,7 +19,7 @@ import { promisify } from 'node:util';
 
 const execFileP = promisify(execFile);
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = join(__dirname, '..', '..', 'data');
+const DATA_DIR = process.env.DATA_DIR || join(__dirname, '..', '..', 'data');
 const DAYS = Number(process.env.BACKTEST_DAYS || 90);
 const PROXY = process.env.KLINES_PROXY || '';
 

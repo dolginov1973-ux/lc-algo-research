@@ -1,0 +1,329 @@
+{
+  "generatedAt": "2026-06-27T09:56:30.130Z",
+  "datasets": [
+    {
+      "symbol": "ADAUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "BNBUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "BTCUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "ETHUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "LINKUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "LTCUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "SOLUSDT",
+      "interval": "4h",
+      "bars": 540
+    },
+    {
+      "symbol": "XRPUSDT",
+      "interval": "4h",
+      "bars": 540
+    }
+  ],
+  "minTrades": 20,
+  "ranking": [
+    {
+      "key": "regime_switch",
+      "name": "Regime switch (trend↔range)",
+      "category": "regime",
+      "retPct": 5.6678791804057935,
+      "sharpe": 0.5958102580832965,
+      "maxDDPct": 20.32542584712605,
+      "winRatePct": 60.31663807900689,
+      "profitFactor": 1.2526339707586351,
+      "numTrades": 27,
+      "score": 0.34395812242212215
+    },
+    {
+      "key": "vwap_reversion",
+      "name": "VWAP(20) reversion",
+      "category": "meanrev",
+      "retPct": 9.76661081528154,
+      "sharpe": 0.631675916580734,
+      "maxDDPct": 24.956409709777244,
+      "winRatePct": 71.87518623203134,
+      "profitFactor": 1.1913073408811161,
+      "numTrades": 40,
+      "score": 0.2770344469021549
+    },
+    {
+      "key": "stoch_reversion",
+      "name": "Stochastic(14,3) reversion",
+      "category": "meanrev",
+      "retPct": 6.1891324391675635,
+      "sharpe": 0.5672457567876892,
+      "maxDDPct": 24.14683053458014,
+      "winRatePct": 71.94676415264651,
+      "profitFactor": 1.180177496403519,
+      "numTrades": 39,
+      "score": 0.20534355649368372
+    },
+    {
+      "key": "macd_cross",
+      "name": "MACD signal cross",
+      "category": "trend",
+      "retPct": -26.494209416947008,
+      "sharpe": -2.21728832596936,
+      "maxDDPct": 40.21982276775404,
+      "winRatePct": 27.818261511759584,
+      "profitFactor": 0.6067536528704192,
+      "numTrades": 46,
+      "score": -3.3507790019739665
+    },
+    {
+      "key": "momentum_roc",
+      "name": "Momentum ROC(10)",
+      "category": "momentum",
+      "retPct": -29.511492853563873,
+      "sharpe": -3.0323560659262143,
+      "maxDDPct": 37.154296280431204,
+      "winRatePct": 26.595393261952587,
+      "profitFactor": 0.5725102250987818,
+      "numTrades": 76,
+      "score": -4.136744343253266
+    },
+    {
+      "key": "opening_range_breakout",
+      "name": "Opening-range breakout (UTC day)",
+      "category": "breakout",
+      "retPct": -16.113606362939258,
+      "sharpe": -3.890853854671422,
+      "maxDDPct": 19.04744203599097,
+      "winRatePct": 36.4476486618566,
+      "profitFactor": 0.4660165368628316,
+      "numTrades": 35,
+      "score": -4.619362458774521
+    },
+    {
+      "key": "sma_crossover",
+      "name": "SMA 20/50 crossover",
+      "category": "trend",
+      "retPct": 15.72737500468364,
+      "sharpe": 1.294514310021833,
+      "maxDDPct": 20.129300239752105,
+      "winRatePct": 42.92757242757243,
+      "profitFactor": 3.2031568467009834,
+      "numTrades": 12,
+      "score": null
+    },
+    {
+      "key": "ema_crossover",
+      "name": "EMA 12/26 crossover",
+      "category": "trend",
+      "retPct": -12.556338013079374,
+      "sharpe": -0.9755539695847327,
+      "maxDDPct": 28.977535768145525,
+      "winRatePct": 23.53494029190623,
+      "profitFactor": 0.7778891266456588,
+      "numTrades": 20,
+      "score": null
+    },
+    {
+      "key": "donchian_breakout",
+      "name": "Donchian 20 breakout (Turtle)",
+      "category": "breakout",
+      "retPct": -2.961218215406829,
+      "sharpe": -0.0625524845645081,
+      "maxDDPct": 23.57833582164688,
+      "winRatePct": 35.62846956964604,
+      "profitFactor": 1.1154480496067767,
+      "numTrades": 12,
+      "score": null
+    },
+    {
+      "key": "supertrend",
+      "name": "Supertrend 10x3",
+      "category": "trend",
+      "retPct": -3.9547098067785855,
+      "sharpe": -0.21520626822557692,
+      "maxDDPct": 25.332190779871414,
+      "winRatePct": 34.67490842490843,
+      "profitFactor": 1.0366669854769794,
+      "numTrades": 12,
+      "score": null
+    },
+    {
+      "key": "ichimoku",
+      "name": "Ichimoku cloud",
+      "category": "trend",
+      "retPct": -3.001039909987249,
+      "sharpe": -0.19756233940061435,
+      "maxDDPct": 18.0899747490289,
+      "winRatePct": 28.246208956735266,
+      "profitFactor": 0.9705200824450209,
+      "numTrades": 23,
+      "score": null
+    },
+    {
+      "key": "keltner_breakout",
+      "name": "Keltner 20x2 breakout",
+      "category": "breakout",
+      "retPct": 7.070856610662422,
+      "sharpe": 0.6638163068054417,
+      "maxDDPct": 21.45513433917896,
+      "winRatePct": 51.15079365079365,
+      "profitFactor": 2.1258779075696026,
+      "numTrades": 5,
+      "score": null
+    },
+    {
+      "key": "bollinger_breakout",
+      "name": "Bollinger 20x2 breakout",
+      "category": "breakout",
+      "retPct": 4.117222158657862,
+      "sharpe": 0.4014628638125841,
+      "maxDDPct": 21.813691474391977,
+      "winRatePct": 40.31759906759906,
+      "profitFactor": 1.470828341775064,
+      "numTrades": 10,
+      "score": null
+    },
+    {
+      "key": "adx_trend_filter",
+      "name": "ADX(14) DI trend filter",
+      "category": "trend",
+      "retPct": -0.840129005134289,
+      "sharpe": 0.03753718973185205,
+      "maxDDPct": 15.517972290810189,
+      "winRatePct": 31.496031746031747,
+      "profitFactor": 1.1533228030050078,
+      "numTrades": 14,
+      "score": null
+    },
+    {
+      "key": "atr_trailing_trend",
+      "name": "ATR chandelier stop-and-reverse",
+      "category": "trend",
+      "retPct": -6.4875878619799945,
+      "sharpe": -0.409538598205042,
+      "maxDDPct": 29.356657768866,
+      "winRatePct": 36.25898680670521,
+      "profitFactor": 1.0055818612417242,
+      "numTrades": 20,
+      "score": null
+    },
+    {
+      "key": "rsi_meanrev",
+      "name": "RSI(14) mean reversion",
+      "category": "meanrev",
+      "retPct": -4.419698914304715,
+      "sharpe": -0.3762050834189461,
+      "maxDDPct": 20.282271683341442,
+      "winRatePct": 61.76190476190477,
+      "profitFactor": 2.241476239745109,
+      "numTrades": 7,
+      "score": null
+    },
+    {
+      "key": "bollinger_reversion",
+      "name": "Bollinger 20x2 reversion",
+      "category": "meanrev",
+      "retPct": -2.3603750980907927,
+      "sharpe": -0.11165331226346435,
+      "maxDDPct": 23.23897920609977,
+      "winRatePct": 68.4782544596786,
+      "profitFactor": 0.9599049013598856,
+      "numTrades": 20,
+      "score": null
+    },
+    {
+      "key": "zscore_reversion",
+      "name": "Z-score(20) reversion",
+      "category": "meanrev",
+      "retPct": -8.35606427721795,
+      "sharpe": -0.8011610153695943,
+      "maxDDPct": 24.309748002479168,
+      "winRatePct": 64.8047292143402,
+      "profitFactor": 0.769513781751242,
+      "numTrades": 20,
+      "score": null
+    },
+    {
+      "key": "rsi_range_filtered",
+      "name": "RSI mean-rev (range only, ADX<22)",
+      "category": "regime",
+      "retPct": 0.0710484334160987,
+      "sharpe": 0.1297823551296404,
+      "maxDDPct": 4.64030769685119,
+      "winRatePct": 46.33333333333333,
+      "profitFactor": 2.2619246139798967,
+      "numTrades": 2,
+      "score": null
+    },
+    {
+      "key": "trend_adx_gated",
+      "name": "EMA cross (trend only, ADX>25)",
+      "category": "regime",
+      "retPct": 3.057082471967513,
+      "sharpe": 0.4535239227144269,
+      "maxDDPct": 13.99023077496221,
+      "winRatePct": 39.34848484848485,
+      "profitFactor": 1.3788989704894956,
+      "numTrades": 10,
+      "score": null
+    },
+    {
+      "key": "dual_confirm_meanrev",
+      "name": "Dual-confirm mean-rev (RSI+BB)",
+      "category": "regime",
+      "retPct": -4.634347716972646,
+      "sharpe": -0.40063122050003097,
+      "maxDDPct": 21.19242038717382,
+      "winRatePct": 65.13607226107226,
+      "profitFactor": 0.8957392700037738,
+      "numTrades": 13,
+      "score": null
+    },
+    {
+      "key": "squeeze_breakout",
+      "name": "BB/Keltner squeeze breakout",
+      "category": "regime",
+      "retPct": 0.42839725670696466,
+      "sharpe": 0.13698356333070408,
+      "maxDDPct": 14.98111288637412,
+      "winRatePct": 29.21606824548001,
+      "profitFactor": 1.0292048528367217,
+      "numTrades": 13,
+      "score": null
+    }
+  ],
+  "top5": [
+    "regime_switch",
+    "vwap_reversion",
+    "stoch_reversion",
+    "macd_cross",
+    "momentum_roc"
+  ]
+}
