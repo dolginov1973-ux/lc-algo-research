@@ -9,7 +9,10 @@ name: hl-watch
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *' # every ~15 min (GitHub may delay under load)
+    # Hourly. GitHub throttles/skips sub-hourly crons (a */15 schedule barely fired here), and
+    # hourly is plenty for swing/position traders that hold for hours. TIMELY live mirroring will
+    # run on a dedicated always-on host (Infra B), not GitHub cron.
+    - cron: '7 * * * *' # :07 each hour (off the top-of-hour rush = more reliable start)
 
 permissions:
   contents: write
