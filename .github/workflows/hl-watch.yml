@@ -37,8 +37,15 @@ jobs:
         run: |
           git config user.name "lc-seo"
           git config user.email "noreply@anthropic.com"
-          # runtime state is gitignored for local dev — force-add so the cron persists it.
-          git add -f data-hl/snap-*.json data-hl/signals-*.jsonl data-hl/paper-state.json data-hl/paper-equity.jsonl 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "hl-watch: signals + paper equity [skip ci]"
-          git pull --rebase origin master || true
-          git push origin HEAD:master || true
+          # Force-add the WHOLE data-hl dir (snap/signals/paper-* are gitignored). Staging the dir
+          # avoids the fatal "pathspec did not match" when an optional glob (e.g. signals-*.jsonl
+          # before any signal fires) has no matches — which previously aborted the entire add and
+          # silently dropped every paper-equity point.
+          git add -f data-hl/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "hl-watch: signals + paper equity [skip ci]"
+            git pull --rebase --autostash origin master || true
+            git push origin HEAD:master || true
+          fi
