@@ -1,0 +1,12 @@
+{
+  "name": "lc-algo-research",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Infra A (paper/research) for Lifechange Crypto algo copy-trading: fetch 90d OHLCV, run 20 standard strategies through a no-lookahead backtester (fees+slippage), rank, pick top-5.",
+  "scripts": {
+    "fetch": "node src/data/fetch-klines.mjs",
+    "backtest": "node src/run-backtest.mjs",
+    "test": "node test/engine-smoke.mjs"
+  }
+}
