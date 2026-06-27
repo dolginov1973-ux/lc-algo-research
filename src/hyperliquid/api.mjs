@@ -35,6 +35,10 @@ export async function userFills(user) {
 export async function meta() {
   return JSON.parse(await curlPost(INFO, { type: 'meta' }));
 }
+// { coin: midPriceString } for every actively traded asset.
+export async function allMids() {
+  return JSON.parse(await curlPost(INFO, { type: 'allMids' }));
+}
 
 // Convert a leaderboard row's windowPerformances [[name,{pnl,roi,vlm}],...] to a flat object.
 export function perf(row) {

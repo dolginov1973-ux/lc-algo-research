@@ -5,3 +5,5 @@ npm-debug.log*
 reports/*.local.*
 data-hl/snap-*.json
 data-hl/signals-*.jsonl
+data-hl/paper-state.json
+data-hl/paper-equity.jsonl

@@ -26,14 +26,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Watch vetted traders
+      - name: Watch vetted traders (signal capture)
         run: node src/hyperliquid/watch-all.mjs
-      - name: Commit snapshots + signals
+      - name: Paper executor (mirror + mark-to-market)
+        run: node src/hyperliquid/paper-executor.mjs
+      - name: Commit snapshots + signals + paper state
         run: |
           git config user.name "lc-seo"
           git config user.email "noreply@anthropic.com"
-          # snap-*/signals-* are gitignored for local dev — force-add so the cron persists state.
-          git add -f data-hl/snap-*.json data-hl/signals-*.jsonl 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "hl-watch: snapshot + signals [skip ci]"
+          # runtime state is gitignored for local dev — force-add so the cron persists it.
+          git add -f data-hl/snap-*.json data-hl/signals-*.jsonl data-hl/paper-state.json data-hl/paper-equity.jsonl 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "hl-watch: signals + paper equity [skip ci]"
           git pull --rebase origin master || true
           git push origin HEAD:master || true
