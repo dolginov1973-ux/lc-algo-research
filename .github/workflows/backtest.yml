@@ -35,9 +35,14 @@ jobs:
           node-version: '20'
       - name: Engine smoke test (no-look-ahead)
         run: node test/engine-smoke.mjs
-      - name: Fetch klines
+      # Best-effort refresh: Binance/Bybit geo-block US runners, so without a data proxy this
+      # may fail — that's fine, the backtest then runs on the committed data/ snapshot. Set the
+      # optional KLINES_PROXY secret (market-data proxy only — never Bitunix) to refresh live.
+      - name: Fetch klines (best-effort)
+        continue-on-error: true
         env:
           BACKTEST_DAYS: ${{ inputs.days || '90' }}
+          KLINES_PROXY: ${{ secrets.KLINES_PROXY }}
         run: node src/data/fetch-klines.mjs ${{ inputs.interval || '1h' }} ${{ inputs.symbols }}
       - name: Run backtest
         run: node src/run-backtest.mjs

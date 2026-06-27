@@ -19,9 +19,11 @@ const REPORT_DIR = join(__dirname, '..', 'reports');
 const MIN_TRADES = Number(process.env.MIN_TRADES || 20);
 
 async function loadDatasets() {
+  // Optional argv[2] filters datasets by interval (e.g. `node src/run-backtest.mjs 4h`).
+  const only = process.argv[2];
   let files;
   try {
-    files = (await readdir(DATA_DIR)).filter((f) => f.endsWith('.json'));
+    files = (await readdir(DATA_DIR)).filter((f) => f.endsWith('.json') && (!only || f.endsWith(`-${only}.json`)));
   } catch {
     files = [];
   }
