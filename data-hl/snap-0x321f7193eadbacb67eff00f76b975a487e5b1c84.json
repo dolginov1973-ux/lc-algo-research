@@ -1,7 +1,7 @@
 {
-  "ts": "2026-07-01T16:34:48.733Z",
+  "ts": "2026-07-01T19:05:28.266Z",
   "addr": "0x321f7193eadbacb67eff00f76b975a487e5b1c84",
-  "accountValue": 156183.242819,
+  "accountValue": 156239.508008,
   "positions": {
     "BTC": {
       "szi": -5,
