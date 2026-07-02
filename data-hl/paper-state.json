@@ -1,17 +1,8 @@
 {
   "capital": 10000,
-  "realized": -163.37245447581893,
-  "positions": {
-    "BTC": {
-      "size": -0.0919364069472775,
-      "avgPx": 60301.212439824536
-    },
-    "ETH": {
-      "size": -26.976063570044875,
-      "avgPx": 1615.1894940914833
-    }
-  },
+  "realized": -2830.302794996985,
+  "positions": {},
   "peakEquity": 10963.381074342884,
-  "halted": false,
-  "cycles": 44
+  "halted": true,
+  "cycles": 45
 }
