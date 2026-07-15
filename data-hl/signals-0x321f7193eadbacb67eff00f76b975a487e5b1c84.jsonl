@@ -1,3 +1,5 @@
 {"ts":"2026-07-02T14:24:51.737Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"ETH","lev":10,"leverageType":"cross","refPx":1733.94,"accountValue":183153.095526,"action":"REDUCE","size":102.67489999999998}
 {"ts":"2026-07-14T15:41:35.059Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"ETH","lev":10,"leverageType":"cross","refPx":1733.94,"accountValue":155520.480533,"action":"REDUCE","size":695.6958999999999}
 {"ts":"2026-07-14T17:23:49.984Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"ETH","lev":10,"leverageType":"cross","refPx":1733.94,"accountValue":92548.347267,"action":"REDUCE","size":374.31170000000003}
+{"ts":"2026-07-15T15:42:03.824Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"BTC","lev":10,"leverageType":"cross","refPx":63892,"accountValue":0,"action":"CLOSE","size":5}
+{"ts":"2026-07-15T15:42:03.824Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"ETH","lev":10,"leverageType":"cross","refPx":1733.94,"accountValue":0,"action":"CLOSE","size":294.1021}
