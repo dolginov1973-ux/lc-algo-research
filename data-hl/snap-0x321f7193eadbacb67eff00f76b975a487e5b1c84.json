@@ -1,7 +1,7 @@
 {
-  "ts": "2026-07-31T13:03:13.256Z",
+  "ts": "2026-07-31T15:26:04.366Z",
   "addr": "0x321f7193eadbacb67eff00f76b975a487e5b1c84",
-  "accountValue": 313611.988783,
+  "accountValue": 355367.42118,
   "positions": {
     "ETH": {
       "szi": 1361.7248,
@@ -10,8 +10,8 @@
       "leverageType": "cross"
     },
     "UNI": {
-      "szi": 152380,
-      "entryPx": 4.25285,
+      "szi": 243006.7,
+      "entryPx": 4.24831,
       "lev": 10,
       "leverageType": "cross"
     }
