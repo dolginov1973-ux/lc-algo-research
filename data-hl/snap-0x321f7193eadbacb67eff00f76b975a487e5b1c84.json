@@ -1,7 +1,7 @@
 {
-  "ts": "2026-08-02T13:46:52.597Z",
+  "ts": "2026-08-02T15:11:10.893Z",
   "addr": "0x321f7193eadbacb67eff00f76b975a487e5b1c84",
-  "accountValue": 328945.483703,
+  "accountValue": 330160.902806,
   "positions": {
     "ETH": {
       "szi": 1361.7248,
