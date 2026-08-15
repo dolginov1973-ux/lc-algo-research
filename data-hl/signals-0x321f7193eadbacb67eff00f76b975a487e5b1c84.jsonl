@@ -12,3 +12,4 @@
 {"ts":"2026-08-03T08:38:18.194Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"ETH","lev":10,"leverageType":"cross","refPx":1847.77,"accountValue":131753.106168,"action":"CLOSE","size":1361.7248}
 {"ts":"2026-08-03T08:38:18.194Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"UNI","lev":10,"leverageType":"cross","refPx":4.24831,"accountValue":131753.106168,"action":"CLOSE","size":243006.7}
 {"ts":"2026-08-03T08:38:18.194Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"BTC","lev":10,"leverageType":"cross","refPx":62562,"accountValue":131753.106168,"action":"OPEN_SHORT","size":20.61822}
+{"ts":"2026-08-15T12:53:35.258Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"SOL","lev":10,"leverageType":"cross","refPx":75.221,"accountValue":160182.449112,"action":"OPEN_SHORT","size":1455.24}
