@@ -16,3 +16,4 @@
 {"ts":"2026-08-15T13:37:11.090Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"BTC","lev":10,"leverageType":"cross","refPx":62618.3,"accountValue":158005.413083,"action":"INCREASE","size":2}
 {"ts":"2026-08-16T18:40:17.303Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"SOL","lev":10,"leverageType":"cross","refPx":75.2566,"accountValue":169587.786319,"action":"INCREASE","size":1216.99}
 {"ts":"2026-08-17T08:54:57.861Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"SOL","lev":10,"leverageType":"cross","refPx":75.2976,"accountValue":183218.178028,"action":"INCREASE","size":1603.6100000000001}
+{"ts":"2026-08-18T09:42:12.317Z","addr":"0x321f7193eadbacb67eff00f76b975a487e5b1c84","coin":"SOL","lev":10,"leverageType":"cross","refPx":75.4478,"accountValue":202065.793318,"action":"INCREASE","size":1482.3400000000001}
