@@ -1,17 +1,11 @@
 {
-  "ts": "2026-08-20T07:49:55.117Z",
+  "ts": "2026-08-20T08:50:02.067Z",
   "addr": "0x321f7193eadbacb67eff00f76b975a487e5b1c84",
-  "accountValue": 183563.410863,
+  "accountValue": 72765.924105,
   "positions": {
     "BTC": {
-      "szi": -24.61822,
+      "szi": -11.15443,
       "entryPx": 62679.5,
-      "lev": 10,
-      "leverageType": "cross"
-    },
-    "SOL": {
-      "szi": -1258.18,
-      "entryPx": 75.4478,
       "lev": 10,
       "leverageType": "cross"
     }
