@@ -10,3 +10,4 @@
 {"ts":"2026-07-30T22:15:01.479Z","addr":"0x10b6f072fabe21bc72ffd77ff5d4414e6cef2980","coin":"BTC","lev":2,"leverageType":"isolated","refPx":64767.4,"accountValue":417776.189374,"action":"OPEN_SHORT","size":12.9631}
 {"ts":"2026-07-31T21:16:05.832Z","addr":"0x10b6f072fabe21bc72ffd77ff5d4414e6cef2980","coin":"BTC","lev":4,"leverageType":"isolated","refPx":62898.1,"accountValue":439356.84556,"action":"INCREASE","size":15.16055}
 {"ts":"2026-08-19T15:39:26.474Z","addr":"0x10b6f072fabe21bc72ffd77ff5d4414e6cef2980","coin":"BTC","lev":4,"leverageType":"isolated","refPx":62898.1,"accountValue":0,"action":"CLOSE","size":28.12365}
+{"ts":"2026-08-21T16:45:15.047Z","addr":"0x10b6f072fabe21bc72ffd77ff5d4414e6cef2980","coin":"BTC","lev":2,"leverageType":"isolated","refPx":77274,"accountValue":315821.638974,"action":"OPEN_SHORT","size":8.20142}

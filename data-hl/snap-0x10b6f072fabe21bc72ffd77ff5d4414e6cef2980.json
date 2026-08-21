@@ -1,6 +1,13 @@
 {
-  "ts": "2026-08-21T15:42:07.253Z",
+  "ts": "2026-08-21T16:45:15.047Z",
   "addr": "0x10b6f072fabe21bc72ffd77ff5d4414e6cef2980",
-  "accountValue": 0,
-  "positions": {}
+  "accountValue": 315821.638974,
+  "positions": {
+    "BTC": {
+      "szi": -8.20142,
+      "entryPx": 77274,
+      "lev": 2,
+      "leverageType": "isolated"
+    }
+  }
 }
